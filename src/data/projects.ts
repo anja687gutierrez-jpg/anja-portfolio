@@ -72,6 +72,37 @@ export const projects: Project[] = [
     hasCaseStudy: true,
   },
   {
+    slug: "ops-hub-v2",
+    title: "Ops Hub v2",
+    tagline: "OOH transit advertising operations portal",
+    description:
+      "Production operations portal managing 860+ advertising campaigns across LA transit. Features Victor AI concierge with deterministic intelligence, RBAC (admin/viewer), real-time Google Sheets sync, batch shipment tracking, canvas gear sidebar, IDB persistence, and own CORS proxy. Zero build tools — 1.3 MB SPA on Cloudflare Pages.",
+    tech: [
+      "React 18",
+      "Tailwind CSS",
+      "Three.js",
+      "Cloudflare Workers + KV",
+      "IndexedDB",
+      "Google Sheets API",
+    ],
+    stats: [
+      { label: "Campaigns", value: "860+" },
+      { label: "Lines of Code", value: "25K+" },
+      { label: "Build Size", value: "1.3 MB" },
+      { label: "Build Tools", value: "0" },
+    ],
+    links: [
+      {
+        label: "Live Site",
+        url: "https://ops-hub-mobile.pages.dev",
+      },
+      {
+        label: "Case Study",
+        url: "https://github.com/anja687gutierrez-jpg/ops-hub-portfolio",
+      },
+    ],
+  },
+  {
     slug: "tour-route-planner",
     title: "Tour Route Planner",
     tagline: "Iconic Pathways — intelligent route optimization",
@@ -89,6 +120,50 @@ export const projects: Project[] = [
       },
     ],
     hasCaseStudy: true,
+  },
+  {
+    slug: "klauz-app",
+    title: "Klauz App",
+    tagline: "iOS knowledge companion with 3-tier AI",
+    description:
+      "A mobile knowledge engine with 17 screens, orbital compass navigation, and a 3-tier AI stack (Gemini, Groq, local knowledge fallback). Built from scratch in React Native with Expo.",
+    tech: ["React Native", "Expo", "TypeScript", "Gemini API", "Groq API"],
+    stats: [
+      { label: "Screens", value: "17" },
+      { label: "Files", value: "45" },
+      { label: "Lines of Code", value: "7,724" },
+    ],
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/anja687gutierrez-jpg/klauz-app",
+      },
+    ],
+  },
+  {
+    slug: "bobs-stockpulse",
+    title: "Bob's StockPulse",
+    tagline: "Automated daily stock analysis platform",
+    description:
+      "Scans portfolio holdings and market movers every morning, generates AI-powered trading signals with technical indicators, and delivers unified email reports via Resend. Architected for SaaS with Free/Pro tiers and Stripe billing.",
+    tech: [
+      "Next.js 16",
+      "AI SDK",
+      "yahoo-finance2",
+      "Cloudflare Workers",
+      "Stripe",
+      "Resend",
+    ],
+    stats: [
+      { label: "Type", value: "FinTech SaaS" },
+      { label: "Hosting", value: "Cloudflare Pages" },
+    ],
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/anja687gutierrez-jpg/bobs-stockpulse",
+      },
+    ],
   },
   {
     slug: "abenteuer-platform",
@@ -117,14 +192,21 @@ export const projects: Project[] = [
   },
   {
     slug: "abenteuer-live",
-    title: "Abenteuer LIVE",
-    tagline: "SEO marketing site with hero video",
+    title: "Abenteuer LIVE + GIW",
+    tagline: "Dual-brand marketing sites from one monorepo",
     description:
-      "A high-performance static marketing site for an adventure rental business. Features hero video, Google Forms integration, and SEO optimization. Deployed on Cloudflare Pages.",
-    tech: ["HTML", "CSS", "JavaScript", "Cloudflare Workers"],
+      "Bilingual (EN/DE) marketing sites for an EV campervan rental startup. Runtime language switching, lead capture via Google Apps Script, optimized Core Web Vitals. Two CF Pages projects from one monorepo, deployed via GitHub Actions.",
+    tech: [
+      "React 19",
+      "Vite 6",
+      "TypeScript",
+      "SSG",
+      "Cloudflare Pages",
+      "GitHub Actions",
+    ],
     stats: [
-      { label: "Type", value: "Marketing Site" },
-      { label: "Hosting", value: "Cloudflare Pages" },
+      { label: "Sites", value: "2" },
+      { label: "Languages", value: "EN + DE" },
     ],
     links: [
       {
@@ -134,26 +216,60 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "ops-hub",
-    title: "LA Operations Hub",
-    tagline: "OOH transit advertising operations portal",
+    slug: "elody",
+    title: "Elody",
+    tagline: "Personal AI knowledge agent with 20 MCP tools",
     description:
-      "A single-page operations portal for LA STAP transit advertising — managing installations, campaigns, hold tracking, and material logistics. Features a 3D login animation, canvas-based gear sidebar, and real-time operational data views.",
-    tech: ["React 18", "Tailwind CSS", "Three.js", "Cloudflare Pages"],
+      "Custom knowledge agent with natural language search over a knowledge graph, code search, Chrome bookmark indexing, two-way SMS with auto-reply, session persistence, and git commit tracking across all repos. Includes an autonomous loop engine with plan generation and circuit breaker.",
+    tech: [
+      "Node.js",
+      "Gemini 2.5 Flash",
+      "Ollama",
+      "MCP SDK",
+      "Ink TUI",
+    ],
     stats: [
-      { label: "Type", value: "Operations Portal" },
-      { label: "Hosting", value: "Cloudflare Pages" },
+      { label: "MCP Tools", value: "20" },
+      { label: "Knowledge Nodes", value: "110+" },
     ],
     links: [
       {
-        label: "Live Site",
-        url: "https://operations-hub.pages.dev",
-      },
-      {
         label: "GitHub",
-        url: "https://github.com/anja687gutierrez-jpg/la-ops-hub",
+        url: "https://github.com/anja687gutierrez-jpg/elody",
       },
     ],
+  },
+  {
+    slug: "magnusview",
+    title: "MagnusView",
+    tagline: "Production Firebase CDN app",
+    description:
+      "A Drive-based content delivery application deployed on Firebase Hosting with real-time data sync and responsive design.",
+    tech: ["React 18", "Firebase", "Tailwind CSS"],
+    stats: [
+      { label: "Type", value: "CDN App" },
+      { label: "Hosting", value: "Firebase" },
+    ],
+    links: [],
+  },
+  {
+    slug: "thought-graph",
+    title: "Thought Graph",
+    tagline: "3D knowledge visualization with 100+ nodes",
+    description:
+      "Interactive 3D knowledge graph with 101 nodes, 403 wikilinks, and 3 topology modes (force-directed, radial, hierarchical). Auto-refreshes from a live knowledge base. Deployed on Cloudflare Pages.",
+    tech: [
+      "Vanilla JS",
+      "3d-force-graph",
+      "Three.js",
+      "Cloudflare Pages",
+    ],
+    stats: [
+      { label: "Nodes", value: "101" },
+      { label: "Wikilinks", value: "403" },
+      { label: "Topology Modes", value: "3" },
+    ],
+    links: [],
   },
   {
     slug: "chrono",
@@ -166,7 +282,12 @@ export const projects: Project[] = [
       { label: "Sessions Indexed", value: "57+" },
       { label: "Chunks", value: "860+" },
     ],
-    links: [],
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/anja687gutierrez-jpg/chrono-open",
+      },
+    ],
   },
 ];
 

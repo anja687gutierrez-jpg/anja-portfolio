@@ -12,10 +12,10 @@ export function HeroSection() {
           Anja Gutierrez
         </h1>
         <p className="text-xl text-primary font-medium">
-          Full-Stack Developer
+          Full-Stack Developer & AI Builder
         </p>
         <p className="mx-auto max-w-lg text-muted-foreground">
-          I build production-quality web applications from original research — from static marketing sites to full Next.js dashboards with 23 pages and 29K+ lines of TypeScript.
+          I build production tools from original research — operations dashboards, AI assistants, mobile apps, and SaaS platforms. 12+ shipped projects, from zero-build SPAs to full Next.js systems.
         </p>
       </div>
 

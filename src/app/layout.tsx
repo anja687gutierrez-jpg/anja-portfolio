@@ -6,24 +6,24 @@ import { ThemeProvider } from "@/components/layout/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Anja Gutierrez — Full-Stack Developer",
+  title: "Anja Gutierrez — Full-Stack Developer & AI Builder",
   description:
-    "Portfolio of Anja Gutierrez. Full-stack developer building production-quality web applications — from static marketing sites to full Next.js dashboards with 23 pages and 29K+ lines of TypeScript.",
+    "Portfolio of Anja Gutierrez. 12+ production projects — operations dashboards, AI assistants, mobile apps, SaaS platforms, and developer tools.",
   authors: [{ name: "Anja Gutierrez" }],
   creator: "Anja Gutierrez",
   openGraph: {
-    title: "Anja Gutierrez — Full-Stack Developer",
+    title: "Anja Gutierrez — Full-Stack Developer & AI Builder",
     description:
-      "Full-stack developer building production-quality web applications from original research. React, Next.js, TypeScript, Firebase, Supabase.",
+      "12+ production projects — operations dashboards, AI assistants, mobile apps, SaaS platforms, and developer tools.",
     type: "website",
     locale: "en_US",
     siteName: "Anja Gutierrez Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Anja Gutierrez — Full-Stack Developer",
+    title: "Anja Gutierrez — Full-Stack Developer & AI Builder",
     description:
-      "Full-stack developer building production-quality web applications. 23-page fleet dashboard, 29K+ lines, zero TypeScript errors.",
+      "12+ production projects — operations dashboards, AI assistants, mobile apps, SaaS platforms, and developer tools.",
   },
 };
 

@@ -1,8 +1,8 @@
 export function AboutSection() {
-  const stats = [
-    { label: "Production Projects", value: "5" },
+  const aboutStats = [
+    { label: "Production Projects", value: "12+" },
     { label: "Lines of Code (XPO alone)", value: "29K+" },
-    { label: "Pages Built (XPO)", value: "23" },
+    { label: "Gumroad Products", value: "6" },
     { label: "TypeScript Errors", value: "0" },
   ];
 
@@ -15,18 +15,18 @@ export function AboutSection() {
       <div className="rounded-xl border bg-card p-6 sm:p-8">
         <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
           <p>
-            I&apos;m a full-stack developer who builds production-quality web applications from the ground up. My approach is research-first: I study real systems, analyze real data, and then design architectures that solve real problems.
+            I&apos;m an operations coordinator turned full-stack developer who builds production tools from the ground up — dashboards, AI assistants, mobile apps, CLI workflows, and SaaS platforms. My approach is research-first: I study real systems, analyze real data, and design architectures that solve real problems.
           </p>
           <p>
-            My flagship project — XPO Fleet Intelligence — is a 23-page fleet management dashboard built from 10 research documents and 16 real data exports. It includes original features like a 6-tier compliance engine and digitized CHP inspection forms that don&apos;t exist in the reference platform.
+            I ship across the full stack: React and Next.js on the frontend, Firebase and Supabase on the backend, Cloudflare and Vercel for deployment, and React Native for mobile. I also build my own developer tools — 10 custom CLI skills, a personal AI knowledge agent, and a 100+ node knowledge graph system.
           </p>
           <p>
-            I work across the full stack: React and Next.js on the frontend, Firebase and Supabase on the backend, and Vercel and Cloudflare for deployment. I prioritize TypeScript strict mode, zero errors, and clean architecture in everything I build.
+            I sell developer guides and starter kits on Gumroad, covering everything from CLAUDE.md architecture to zero-cost business dashboards. I prioritize TypeScript strict mode, zero errors, and clean architecture in everything I build.
           </p>
         </div>
 
         <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-          {stats.map((stat) => (
+          {aboutStats.map((stat) => (
             <div
               key={stat.label}
               className="rounded-lg bg-muted/50 px-3 py-3 text-center"

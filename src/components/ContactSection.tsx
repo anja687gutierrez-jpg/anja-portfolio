@@ -1,7 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Github, Mail, Phone, ExternalLink } from "lucide-react";
+import { Github, Mail, ExternalLink } from "lucide-react";
 
 const contactLinks = [
+  {
+    label: "Work With Me",
+    url: "/work-with-me",
+    icon: ExternalLink,
+  },
   {
     label: "GitHub",
     url: "https://github.com/anja687gutierrez-jpg",
@@ -13,13 +18,8 @@ const contactLinks = [
     icon: Mail,
   },
   {
-    label: "(310) 600-6624",
-    url: "tel:+13106006624",
-    icon: Phone,
-  },
-  {
-    label: "XPO Fleet (GitHub)",
-    url: "https://github.com/anja687gutierrez-jpg/xpo-fleet",
+    label: "Developer Tools & Guides",
+    url: "https://products.goiconicway.com",
     icon: ExternalLink,
   },
   {
