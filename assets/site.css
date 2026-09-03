@@ -148,3 +148,7 @@ table.data tr:last-child td { border-bottom: 0; }
 
 /* Featured card image fills its half of the split at any viewport. */
 .feature-img { width: 100%; height: 100%; min-height: 260px; object-fit: cover; object-position: top left; }
+
+/* Tailwind's preflight zeroes <p> margins; restore rhythm inside prose blocks. */
+.prose-block p { margin: 0 0 1.05em; }
+.prose-block p:last-child { margin-bottom: 0; }
