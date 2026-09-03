@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tour Route Planner — Anja Gutierrez</title>
+<meta name="description" content="Case study: an AI road trip planner with route optimization, drag-and-drop itineraries, Firebase Auth, and a natural-language parser that scores its own confidence per field.">
+<meta name="author" content="Anja Gutierrez">
+<link rel="canonical" href="https://anja-portfolio.pages.dev/projects/tour-route-planner.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tour Route Planner — Anja Gutierrez">
+<meta property="og:description" content="Case study: an AI road trip planner with route optimization, drag-and-drop itineraries, Firebase Auth, and a natural-language parser that scores its own confidence per field.">
+<meta property="og:url" content="https://anja-portfolio.pages.dev/projects/tour-route-planner.html">
+<meta property="og:image" content="https://anja-portfolio.pages.dev/screenshots/tour-route-planner.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230f141e'/><text x='50' y='69' font-size='52' font-weight='bold' text-anchor='middle' fill='%233e73ef' font-family='system-ui'>A</text></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap flex items-center justify-between h-16">
+    <a href="/" class="font-semibold tracking-tight no-underline">Anja Gutierrez</a>
+    <nav class="flex items-center gap-6">
+      <a class="nav" href="/#work">← All work</a>
+      <a class="nav" href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="relative overflow-hidden">
+  <div class="aurora"></div>
+  <div class="wrap relative" style="padding-top:72px;padding-bottom:48px;">
+    <span class="eyebrow">Case study</span>
+    <h1 class="mt-6 mb-0 font-bold tracking-tight" style="font-size:clamp(32px,5vw,50px);line-height:1.08;max-width:900px;">Tour Route Planner</h1>
+    <p class="mt-5 text-lg" style="color:var(--muted-fg);max-width:720px;">Iconic Pathways — AI road-trip planning that asks a question instead of guessing.</p>
+    <div class="flex flex-wrap gap-2 mt-7"><span class="chip">React 18</span><span class="chip">TypeScript</span><span class="chip">Vite</span><span class="chip">Firebase Auth</span><span class="chip">Firestore</span><span class="chip">Leaflet</span><span class="chip">Gemini Vision</span></div>
+    <div class="metrics mt-9"><div class="metric"><b>5</b><span>Confidence-scored fields</span></div><div class="metric"><b>60%</b><span>Clarification threshold</span></div><div class="metric"><b>3</b><span>Persistence modes</span></div><div class="metric"><b>AR</b><span>Trail scanning</span></div></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap" style="max-width:820px;">
+    <h2 class="section-title">What it is</h2>
+    <div style="color:#c3cad6;font-size:15.5px;line-height:1.75;"><p>A road-trip planner built around one interaction: you type “3-day coastal trip from LA” and get a real itinerary with waypoints, attractions, charging stops, and camping spots.</p><p>Around that sits interactive mapping, route optimization, drag-and-drop itinerary editing, Firebase Auth, a voice assistant for hands-free navigation, and a PathScanner AR feature that analyzes a trail in real time using the device camera, GPS, and Gemini Vision.</p></div>
+  </div>
+</section>
+<section class="section" style="padding-top:0;">
+  <div class="wrap" style="max-width:820px;">
+    <h2 class="section-title">The design problem</h2>
+    <div style="color:#c3cad6;font-size:15.5px;line-height:1.75;"><p>Natural-language trip planning fails in a specific way: the parser extracts something plausible, the app commits to it, and the user gets a confident itinerary for the wrong place. A single overall confidence score doesn't help either — knowing a prompt is “62% understood” tells you nothing about <em>which</em> part to ask about.</p><p>So every field is scored on its own, and the app only asks about the fields that actually came out weak. Confident destination but vague duration? One question about duration. Nothing else.</p></div>
+  </div>
+</section>
+<section class="section" style="padding-top:0;">
+  <div class="wrap" style="max-width:900px;">
+    <h2 class="section-title">The code</h2>
+    <p class="section-sub">Pulled straight from the production codebase — unedited except for trimming.</p>
+    
+      <div class="snippet mb-6">
+        <div class="snippet-head">
+          <span class="snippet-file">src/utils/promptParser.ts</span>
+          <span class="snippet-lang">typescript</span>
+        </div>
+        <div class="snippet-note"><strong>Per-field confidence, then targeted clarification.</strong> Each extracted field carries its own score, and anything below 0.6 generates a question with concrete suggestions attached — the suggestions matter, because an open question about “interests” gets a worse answer than five tappable options. The result is a planner that degrades into a short conversation instead of a wrong answer.</div>
+        <pre><code class="language-typescript">  // Generate clarifying questions when confidence is low
+  static generateClarificationQuestions(parsed: ParsedPreferences): ClarificationQuestion[] {
+    const questions: ClarificationQuestion[] = [];
+    const threshold = 0.6; // Ask for clarification below 60% confidence
+
+    if (parsed.confidence.destination &lt; threshold) {
+      questions.push({
+        field: &#x27;destination&#x27;,
+        question: &quot;Where would you like to go? I wasn&#x27;t sure about the destination.&quot;,
+        suggestions: [&#x27;California&#x27;, &#x27;Pacific Northwest&#x27;, &#x27;New England&#x27;, &#x27;Southwest USA&#x27;, &#x27;Florida&#x27;],
+        priority: &#x27;high&#x27;
+      });
+    }
+
+    if (parsed.confidence.duration &lt; threshold) {
+      questions.push({
+        field: &#x27;duration&#x27;,
+        question: &quot;How many days do you have for this trip?&quot;,
+        suggestions: [&#x27;2-3 days (weekend)&#x27;, &#x27;4-6 days (long trip)&#x27;, &#x27;7+ days (extended journey)&#x27;],
+        priority: &#x27;high&#x27;
+      });
+    }
+
+    if (parsed.confidence.interests &lt; threshold) {</code></pre>
+      </div>
+  </div>
+</section>
+<section class="section" style="padding-top:0;">
+  <div class="wrap" style="max-width:980px;">
+    <h2 class="section-title" style="font-size:22px;">Screens</h2>
+    <p class="section-sub">From the running application.</p>
+    <figure class="shot m-0 mb-5"><img src="/screenshots/tour-route-planner.png" alt="Tour Route Planner dashboard with an active trip" loading="lazy"><figcaption>Trip dashboard — active route, itinerary, and map.</figcaption></figure>
+  </div>
+</section>
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="card" style="padding:32px;">
+      <h2 class="section-title" style="font-size:22px;margin-bottom:6px;">Want to see more of this one?</h2>
+      <p class="section-sub" style="margin-bottom:22px;">
+        The repository is private, but I'm glad to walk through the codebase live — architecture, tradeoffs,
+        the parts that went wrong first.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a class="btn btn-primary" href="mailto:anja687gutierrez@gmail.com">Email me</a>
+        <a class="btn btn-ghost" href="/#work">← Back to all work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap flex flex-wrap items-center justify-between gap-3">
+    <span>Anja Gutierrez — Los Angeles, CA</span>
+    <span>Designed and built from scratch. Not a template.</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>if(window.hljs){hljs.highlightAll();}</script>
+</body>
+</html>

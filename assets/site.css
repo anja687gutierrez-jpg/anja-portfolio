@@ -1,0 +1,150 @@
+/* Anja Gutierrez — portfolio design tokens.
+   Dark-first oklch palette carried over from the XPO Fleet design system. */
+:root {
+  --bg: #070b12;
+  --card: #0f141e;
+  --card-2: #131926;
+  --border: #222933;
+  --muted: #1c212c;
+  --muted-fg: #878f9b;
+  --fg: #f8fafc;
+  --primary: #3e73ef;
+  --accent: #6e62f8;
+  --success: #22c55e;
+  --warn: #f59e0b;
+  --danger: #ff6568;
+  --radius: 14px;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Inter, sans-serif;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+
+/* Ambient wash behind the hero — cheap, no canvas, no JS. */
+.aurora {
+  position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0;
+}
+.aurora::before, .aurora::after {
+  content: ""; position: absolute; border-radius: 50%; filter: blur(90px); opacity: .28;
+}
+.aurora::before { width: 460px; height: 460px; background: var(--primary); top: -170px; left: -120px; }
+.aurora::after  { width: 380px; height: 380px; background: var(--accent);  top: -60px;  right: -120px; }
+
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+/* Surfaces */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.card-hover { transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease; }
+.card-hover:hover {
+  transform: translateY(-3px);
+  border-color: #33405a;
+  box-shadow: 0 18px 40px rgba(0,0,0,.45);
+}
+
+/* Chips + badges */
+.chip {
+  display: inline-block; padding: 4px 10px; border-radius: 999px;
+  background: var(--muted); border: 1px solid var(--border);
+  color: #c3cad6; font-size: 12px; line-height: 1.6; white-space: nowrap;
+}
+.eyebrow {
+  display: inline-block; padding: 4px 12px; border-radius: 999px;
+  background: rgba(62,115,239,.12); border: 1px solid rgba(62,115,239,.35);
+  color: #9dbaff; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+}
+
+/* Metric grid */
+.metrics { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0,1fr)); }
+@media (min-width: 720px) { .metrics { grid-template-columns: repeat(4, minmax(0,1fr)); } }
+.metric { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.metric b { display: block; font-size: 26px; line-height: 1.15; letter-spacing: -.02em; }
+.metric span { display: block; margin-top: 4px; font-size: 12px; color: var(--muted-fg); }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px; border-radius: 10px; font-size: 14px; font-weight: 600;
+  text-decoration: none; border: 1px solid transparent; transition: background .15s ease, border-color .15s ease;
+}
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: #5386ff; }
+.btn-ghost { border-color: var(--border); color: #d7dce4; }
+.btn-ghost:hover { border-color: #39445c; background: var(--muted); }
+
+/* Tables */
+table.data { width: 100%; border-collapse: collapse; font-size: 14px; }
+table.data th, table.data td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.data th { color: var(--muted-fg); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; font-weight: 600; }
+table.data tr:last-child td { border-bottom: 0; }
+.table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); }
+
+/* Code samples — the core of the case studies */
+.snippet { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--card); }
+.snippet-head {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 12px 16px; background: var(--card-2); border-bottom: 1px solid var(--border);
+}
+.snippet-file { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #9dbaff; }
+.snippet-lang { font-size: 11px; color: var(--muted-fg); text-transform: uppercase; letter-spacing: .07em; }
+.snippet-note { padding: 12px 16px; font-size: 13.5px; color: #b9c1cd; border-bottom: 1px solid var(--border); background: rgba(110,98,248,.05); }
+.snippet pre { margin: 0; overflow-x: auto; }  /* no height cap — the code is the point */
+.snippet pre code.hljs { background: transparent; padding: 16px; font-size: 12.5px; line-height: 1.65; }
+
+/* Screenshot frame */
+.shot { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--card); }
+.shot img { width: 100%; }
+.shot figcaption { padding: 10px 14px; font-size: 12.5px; color: var(--muted-fg); border-top: 1px solid var(--border); }
+
+/* Section rhythm */
+.section { padding: 72px 0; }
+.section-title { font-size: 30px; font-weight: 700; letter-spacing: -.02em; margin: 0 0 8px; }
+.section-sub { color: var(--muted-fg); margin: 0 0 32px; font-size: 15px; }
+
+/* Header */
+.site-head {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(7,11,18,.82); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.site-head a.nav { color: var(--muted-fg); text-decoration: none; font-size: 14px; }
+.site-head a.nav:hover { color: var(--fg); }
+
+.footer { border-top: 1px solid var(--border); padding: 32px 0; color: var(--muted-fg); font-size: 13.5px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* Project card thumbnails — one aspect ratio so the grid stays regular
+   regardless of the source screenshot's dimensions. */
+.thumb { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top center; }
+.thumb-alt {
+  width: 100%; aspect-ratio: 16 / 9;
+  display: flex; align-items: center; justify-content: center;
+  background: radial-gradient(120% 120% at 20% 0%, rgba(110,98,248,.30), transparent 60%),
+              radial-gradient(120% 120% at 90% 20%, rgba(62,115,239,.28), transparent 55%),
+              var(--card-2);
+  border-bottom: 1px solid var(--border);
+  color: #7f8a9c; font-size: 13px; letter-spacing: .1em; text-transform: uppercase;
+}
+/* Cards in a row end with their button on the same line. */
+.card-flex { display: flex; flex-direction: column; }
+.card-flex .card-body { display: flex; flex-direction: column; flex: 1 1 auto; }
+.card-flex .card-cta { margin-top: auto; align-self: flex-start; }
+
+/* Featured card image fills its half of the split at any viewport. */
+.feature-img { width: 100%; height: 100%; min-height: 260px; object-fit: cover; object-position: top left; }

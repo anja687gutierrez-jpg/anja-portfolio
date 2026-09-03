@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XPO Fleet Intelligence — Anja Gutierrez</title>
+<meta name="description" content="Case study: a 23-page fleet management dashboard built from 10 research documents and 16 real data exports, with a 6-tier compliance engine and digitized CHP inspection forms.">
+<meta name="author" content="Anja Gutierrez">
+<link rel="canonical" href="https://anja-portfolio.pages.dev/projects/xpo-fleet.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="XPO Fleet Intelligence — Anja Gutierrez">
+<meta property="og:description" content="Case study: a 23-page fleet management dashboard built from 10 research documents and 16 real data exports, with a 6-tier compliance engine and digitized CHP inspection forms.">
+<meta property="og:url" content="https://anja-portfolio.pages.dev/projects/xpo-fleet.html">
+<meta property="og:image" content="https://anja-portfolio.pages.dev/screenshots/xpo-fleet-dashboard.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230f141e'/><text x='50' y='69' font-size='52' font-weight='bold' text-anchor='middle' fill='%233e73ef' font-family='system-ui'>A</text></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap flex items-center justify-between h-16">
+    <a href="/" class="font-semibold tracking-tight no-underline">Anja Gutierrez</a>
+    <nav class="flex items-center gap-6">
+      <a class="nav" href="/#work">← All work</a>
+      <a class="nav" href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="relative overflow-hidden">
+  <div class="aurora"></div>
+  <div class="wrap relative" style="padding-top:72px;padding-bottom:48px;">
+    <span class="eyebrow">Flagship · 2026</span>
+    <h1 class="mt-6 mb-0 font-bold tracking-tight" style="font-size:clamp(32px,5vw,50px);line-height:1.08;max-width:900px;">XPO Fleet Intelligence</h1>
+    <p class="mt-5 text-lg" style="color:var(--muted-fg);max-width:720px;">A 23-page fleet management platform built from original research — not a template, not a fork.</p>
+    <div class="flex flex-wrap gap-2 mt-7"><span class="chip">Next.js 15 (App Router)</span><span class="chip">React 19</span><span class="chip">Tailwind CSS 4</span><span class="chip">shadcn/ui</span><span class="chip">Recharts</span><span class="chip">TypeScript strict</span></div>
+    <div class="metrics mt-9"><div class="metric"><b>23</b><span>Pages built</span></div><div class="metric"><b>29K+</b><span>Lines of code</span></div><div class="metric"><b>21</b><span>Entity types</span></div><div class="metric"><b>0</b><span>TypeScript errors</span></div><div class="metric"><b>114</b><span>Source files</span></div><div class="metric"><b>10</b><span>Research documents</span></div><div class="metric"><b>10,647</b><span>Lines of research</span></div><div class="metric"><b>16</b><span>Data exports analyzed</span></div></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap" style="max-width:820px;">
+    <h2 class="section-title">What it is</h2>
+    <div style="color:#c3cad6;font-size:15.5px;line-height:1.75;"><p>A full-scale fleet management platform covering analytics, monitoring, risk management, service programs, dispatch, and AI-assisted insights — built for a national transportation operation.</p><p>Every screen runs on typed mock data shaped to match real telematics distributions, so the data layer swaps for a live API without touching a component. 32 vehicles, 55 drivers, 4 preventive-maintenance programs, 22 LAX-area zones.</p><p>The point of the project was to prove a research-first process: study the real system, model the real domain, then build. The reference platform (EBAI) was analyzed across 84 screenshots and 16 exports before a single component was written.</p></div>
+  </div>
+</section>
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <h2 class="section-title" style="font-size:22px;">How it was built</h2>
+    <p class="section-sub">Ten phases, research first.</p>
+    <div class="table-scroll"><table class="data"><thead><tr><th>Phase</th><th>Work</th></tr></thead><tbody><tr><td><strong>Phase 0</strong><br><span style='color:var(--muted-fg);font-size:12.5px;'>Research</span></td><td>Analyzed 84 screenshots of the live EBAI platform and 16 real fleet data exports. Produced 10 research documents (10,647 lines) covering domain analysis, UX patterns, data modeling, technology selection, and competitors.</td></tr><tr><td><strong>Phase 1–2</strong><br><span style='color:var(--muted-fg);font-size:12.5px;'>Architecture</span></td><td>Designed 21 TypeScript entity types from scratch against real operational patterns, then generated mock data matching actual telematics distributions rather than random values.</td></tr><tr><td><strong>Phase 3–10</strong><br><span style='color:var(--muted-fg);font-size:12.5px;'>Build</span></td><td>23 pages across 7 functional areas, 24 UI components, 6 chart types, the compliance engine, the PM alert system, and a dark-first design system. Zero TypeScript errors across the codebase.</td></tr></tbody></table></div>
+  </div>
+</section>
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <h2 class="section-title" style="font-size:22px;">Original features</h2>
+    <p class="section-sub">Designed from the research — these do not exist in the reference platform.</p>
+    <div class="grid md:grid-cols-3 gap-4"><div class="card p-6"><h3 class="mt-0 mb-2 text-lg font-bold tracking-tight">Risk Management Center</h3><p style="color:var(--muted-fg);font-size:14px;line-height:1.65;margin:0;">6-tier compliance expiration tracking across vehicle, driver, and enterprise documents. Ninety-, sixty-, thirty- and seven-day alert bands, plus critical and expired states.</p></div><div class="card p-6"><h3 class="mt-0 mb-2 text-lg font-bold tracking-tight">Service Programs Engine</h3><p style="color:var(--muted-fg);font-size:14px;line-height:1.65;margin:0;">Vehicle-type-specific PM schedules — 59 service items at mileage and time intervals derived from real maintenance records. Covers E-450 (Gas/CNG/EV) and Freightliner M2-106 Diesel.</p></div><div class="card p-6"><h3 class="mt-0 mb-2 text-lg font-bold tracking-tight">Digital Inspections</h3><p style="color:var(--muted-fg);font-size:14px;line-height:1.65;margin:0;">Pre-Trip (38 items) and CHP 45-Day (48 items with 381 failure-mode dropdowns), digitized from the actual paper forms and CHP 34505 CVC requirements.</p></div></div>
+  </div>
+</section>
+<section class="section" style="padding-top:0;">
+  <div class="wrap" style="max-width:900px;">
+    <h2 class="section-title">The code</h2>
+    <p class="section-sub">Pulled straight from the production codebase — unedited except for trimming.</p>
+    
+      <div class="snippet mb-6">
+        <div class="snippet-head">
+          <span class="snippet-file">src/lib/compliance.ts</span>
+          <span class="snippet-lang">typescript</span>
+        </div>
+        <div class="snippet-note"><strong>The compliance engine.</strong> Fleet compliance isn't binary — a document expiring in 80 days and one expiring tomorrow need different handling. Six ordered bands, evaluated once, returning everything the UI needs (status, color, icon, label) so no component re-derives severity and drifts from the others.</div>
+        <pre><code class="language-typescript">export function getComplianceStatus(expirationDate: string | Date): ComplianceStatusInfo {
+  const expiry = new Date(expirationDate);
+  const now = new Date();
+  const days = Math.ceil((expiry.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+
+  if (days &lt; 0) {
+    return { status: &quot;expired&quot;, daysRemaining: days, color: &quot;#EF4444&quot;, bgColor: &quot;rgba(239,68,68,0.1)&quot;, icon: &quot;circle-x&quot;, label: &quot;Expired&quot; };
+  }
+  if (days &lt;= 7) {
+    return { status: &quot;critical&quot;, daysRemaining: days, color: &quot;#F97316&quot;, bgColor: &quot;rgba(249,115,22,0.1)&quot;, icon: &quot;alert-triangle&quot;, label: &quot;Critical&quot; };
+  }
+  if (days &lt;= 30) {
+    return { status: &quot;warning&quot;, daysRemaining: days, color: &quot;#F59E0B&quot;, bgColor: &quot;rgba(245,158,11,0.1)&quot;, icon: &quot;clock&quot;, label: &quot;Warning&quot; };
+  }
+  if (days &lt;= 60) {
+    return { status: &quot;caution&quot;, daysRemaining: days, color: &quot;#EAB308&quot;, bgColor: &quot;rgba(234,179,8,0.1)&quot;, icon: &quot;eye&quot;, label: &quot;Caution&quot; };
+  }
+  if (days &lt;= 90) {
+    return { status: &quot;notice&quot;, daysRemaining: days, color: &quot;#3B82F6&quot;, bgColor: &quot;rgba(59,130,246,0.1)&quot;, icon: &quot;info&quot;, label: &quot;Notice&quot; };
+  }
+  return { status: &quot;current&quot;, daysRemaining: days, color: &quot;#22C55E&quot;, bgColor: &quot;rgba(34,197,94,0.1)&quot;, icon: &quot;check-circle&quot;, label: &quot;Current&quot; };
+}</code></pre>
+      </div>
+      <div class="snippet mb-6">
+        <div class="snippet-head">
+          <span class="snippet-file">src/lib/pm-engine.ts</span>
+          <span class="snippet-lang">typescript</span>
+        </div>
+        <div class="snippet-note"><strong>Preventive maintenance on two axes.</strong> Service items come due on mileage <em>or</em> time, whichever hits first, and the thresholds are proportional (10% of the interval = due soon, 25% = upcoming) so a 5,000-mile oil change and a 100,000-mile transmission service both warn at a sensible point. Note the guards that stop the time axis from downgrading an already-overdue mileage result.</div>
+        <pre><code class="language-typescript">export function evaluatePMStatus(
+  vehicle: Vehicle,
+  schedule: PMSchedule
+): PMServiceStatus[] {
+  const now = new Date();
+  const lastServiceDate = new Date(vehicle.lastServiceDate);
+  const milesSinceService = vehicle.currentMileage - vehicle.lastServiceMileage;
+  const monthsSinceService = Math.round(
+    (now.getTime() - lastServiceDate.getTime()) / (1000 * 60 * 60 * 24 * 30.44)
+  );
+
+  return schedule.items.map((item) =&gt; {
+    let milesUntilDue: number | null = null;
+    let monthsUntilDue: number | null = null;
+    let alertLevel: PMAlertLevel = &quot;current&quot;;
+
+    if (item.intervalMiles) {
+      milesUntilDue = item.intervalMiles - milesSinceService;
+      if (milesUntilDue &lt;= 0) alertLevel = &quot;overdue&quot;;
+      else if (milesUntilDue &lt;= item.intervalMiles * 0.1) alertLevel = &quot;due-soon&quot;;
+      else if (milesUntilDue &lt;= item.intervalMiles * 0.25) alertLevel = &quot;upcoming&quot;;
+    }
+
+    if (item.intervalMonths) {
+      monthsUntilDue = item.intervalMonths - monthsSinceService;
+      if (monthsUntilDue &lt;= 0 &amp;&amp; alertLevel !== &quot;overdue&quot;) alertLevel = &quot;overdue&quot;;
+      else if (monthsUntilDue &lt;= 1 &amp;&amp; alertLevel === &quot;current&quot;) alertLevel = &quot;due-soon&quot;;
+      else if (monthsUntilDue &lt;= 2 &amp;&amp; alertLevel === &quot;current&quot;) alertLevel = &quot;upcoming&quot;;
+    }
+
+    // Items without intervals (e.g., &quot;as needed&quot;) stay current
+    if (!item.intervalMiles &amp;&amp; !item.intervalMonths) {
+      alertLevel = &quot;current&quot;;
+    }
+
+    return {</code></pre>
+      </div>
+  </div>
+</section>
+<section class="section" style="padding-top:0;">
+  <div class="wrap" style="max-width:980px;">
+    <h2 class="section-title" style="font-size:22px;">Screens</h2>
+    <p class="section-sub">From the running application.</p>
+    <figure class="shot m-0 mb-5"><img src="/screenshots/xpo-fleet-dashboard.png" alt="XPO Fleet Smart Hub dashboard" loading="lazy"><figcaption>Smart Hub — fleet KPIs, compliance rollup, and PM alerts on one screen.</figcaption></figure>
+  </div>
+</section>
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="card" style="padding:32px;">
+      <h2 class="section-title" style="font-size:22px;margin-bottom:6px;">Want to see more of this one?</h2>
+      <p class="section-sub" style="margin-bottom:22px;">
+        The repository is private, but I'm glad to walk through the codebase live — architecture, tradeoffs,
+        the parts that went wrong first.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a class="btn btn-primary" href="mailto:anja687gutierrez@gmail.com">Email me</a>
+        <a class="btn btn-ghost" href="/#work">← Back to all work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap flex flex-wrap items-center justify-between gap-3">
+    <span>Anja Gutierrez — Los Angeles, CA</span>
+    <span>Designed and built from scratch. Not a template.</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>if(window.hljs){hljs.highlightAll();}</script>
+</body>
+</html>

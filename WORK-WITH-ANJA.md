@@ -42,7 +42,7 @@ I don't work from templates. I don't follow tutorials. I architect systems from 
 
 - **Tour Route Planner** — AI-powered road trip planning with interactive Mapbox maps, route optimization, drag-and-drop itinerary editing, Firebase Auth, and a PathScanner AR feature for real-time trail analysis using device camera + Gemini Vision + GPS. React 18, TypeScript, Vite.
 
-- **Thought Graph** — 3D knowledge visualization with 101 nodes, 403 wikilinks, and 3 topology modes (force-directed, radial, hierarchical). Built with 3d-force-graph and Three.js. Auto-refreshes from my knowledge base. Live on Cloudflare Pages.
+- **Thought Graph** — 3D knowledge visualization with 101 nodes, 403 wikilinks, and 3 topology modes (force-directed, radial, hierarchical). Built with 3d-force-graph and Three.js. Auto-refreshes from my knowledge base. Runs locally by design — the graph contains private project metadata.
 
 ### Developer Tools & Infrastructure
 

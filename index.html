@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anja Gutierrez — Full-Stack Developer</title>
+<meta name="description" content="Los Angeles full-stack developer building production tools from original research — operations dashboards, AI assistants, mobile apps, and developer tooling. Case studies with real code.">
+<meta name="author" content="Anja Gutierrez">
+<link rel="canonical" href="https://anja-portfolio.pages.dev/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Anja Gutierrez — Full-Stack Developer">
+<meta property="og:description" content="Production tools built from original research. Operations dashboards, AI assistants, mobile apps, developer tooling — with real code samples.">
+<meta property="og:url" content="https://anja-portfolio.pages.dev/">
+<meta property="og:image" content="https://anja-portfolio.pages.dev/screenshots/xpo-fleet-dashboard.png">
+<meta property="og:site_name" content="Anja Gutierrez Portfolio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anja Gutierrez — Full-Stack Developer">
+<meta name="twitter:description" content="Production tools built from original research, with real code samples from each project.">
+<meta name="twitter:image" content="https://anja-portfolio.pages.dev/screenshots/xpo-fleet-dashboard.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230f141e'/><text x='50' y='69' font-size='52' font-weight='bold' text-anchor='middle' fill='%233e73ef' font-family='system-ui'>A</text></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap flex items-center justify-between h-16">
+    <a href="/" class="font-semibold tracking-tight no-underline">Anja Gutierrez</a>
+    <nav class="flex items-center gap-6">
+      <a class="nav hidden sm:inline" href="#work">Work</a>
+      <a class="nav hidden sm:inline" href="#stack">Stack</a>
+      <a class="nav hidden sm:inline" href="#about">About</a>
+      <a class="nav" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="relative overflow-hidden">
+  <div class="aurora"></div>
+  <div class="wrap relative" style="padding-top:96px;padding-bottom:80px;">
+    <span class="eyebrow">Los Angeles, CA</span>
+    <h1 class="mt-6 mb-0 font-bold tracking-tight" style="font-size:clamp(38px,6vw,60px);line-height:1.05;max-width:900px;">
+      I build the tools my team actually needs — then ship them to production and maintain them myself.
+    </h1>
+    <p class="mt-6 text-lg" style="color:var(--muted-fg);max-width:680px;">
+      Operations coordinator turned full-stack developer. Operations dashboards, AI assistants,
+      mobile apps, and developer tooling — architected from original research, not templates.
+    </p>
+    <div class="mt-9 flex flex-wrap gap-3">
+      <a class="btn btn-primary" href="#work">See the work</a>
+      <a class="btn btn-ghost" href="#contact">Get in touch</a>
+    </div>
+    <div class="metrics mt-14">
+      <div class="metric"><b>12+</b><span>Production projects</span></div>
+      <div class="metric"><b>60+</b><span>Pages &amp; views shipped</span></div>
+      <div class="metric"><b>4</b><span>AI integrations in prod</span></div>
+      <div class="metric"><b>6</b><span>Developer products sold</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Note about private repos -->
+<div class="wrap">
+  <div class="card" style="padding:18px 20px;display:flex;gap:14px;align-items:flex-start;">
+    <span style="font-size:18px;line-height:1.3;">🔒</span>
+    <p style="margin:0;font-size:14px;color:#b9c1cd;line-height:1.65;">
+      <strong style="color:var(--fg);">Most of this code lives in private repositories</strong> — it runs real
+      operations for real businesses. So instead of dead GitHub links, every case study below carries the actual
+      source: annotated snippets pulled straight out of the shipping codebase, alongside the architecture decisions
+      behind them. Happy to walk through any repo live.
+    </p>
+  </div>
+</div>
+
+<!-- Work -->
+<section class="section" id="work">
+  <div class="wrap">
+    <h2 class="section-title">Selected work</h2>
+    <p class="section-sub">Eight case studies. Each one includes real code from the production codebase.</p>
+
+    <!-- Featured: XPO -->
+    <a href="/projects/xpo-fleet.html" class="card card-hover no-underline block overflow-hidden mb-6">
+      <div class="grid md:grid-cols-2">
+        <img class="feature-img" src="/screenshots/xpo-fleet-dashboard.png" alt="XPO Fleet Intelligence — Smart Hub dashboard" loading="lazy">
+        <div class="p-7">
+          <span class="eyebrow">Flagship</span>
+          <h3 class="mt-4 mb-2 text-2xl font-bold tracking-tight">XPO Fleet Intelligence</h3>
+          <p style="color:var(--muted-fg);font-size:14.5px;line-height:1.65;">
+            A 23-page fleet management platform built from 10 research documents and 16 real data exports.
+            Includes a 6-tier compliance engine, digitized CHP inspection forms, and vehicle-specific PM
+            schedules that don't exist in the reference platform.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-5">
+            <span class="chip">Next.js 15</span><span class="chip">React 19</span>
+            <span class="chip">Tailwind 4</span><span class="chip">Recharts</span>
+            <span class="chip">TypeScript</span>
+          </div>
+          <div class="metrics mt-6" style="grid-template-columns:repeat(4,minmax(0,1fr));">
+            <div class="metric" style="padding:12px;"><b style="font-size:20px;">23</b><span>Pages</span></div>
+            <div class="metric" style="padding:12px;"><b style="font-size:20px;">29K+</b><span>Lines</span></div>
+            <div class="metric" style="padding:12px;"><b style="font-size:20px;">21</b><span>Entities</span></div>
+            <div class="metric" style="padding:12px;"><b style="font-size:20px;">0</b><span>TS errors</span></div>
+          </div>
+          <span class="btn btn-primary mt-6">Read the case study →</span>
+        </div>
+      </div>
+    </a>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <a href="/projects/ops-hub-v2.html" class="card card-hover card-flex no-underline overflow-hidden">
+        <img class="thumb" src="/screenshots/ops-hub-dashboard.png" alt="Ops Hub v2 dashboard in dark mode" loading="lazy">
+        <div class="p-6 card-body">
+          <h3 class="mt-0 mb-2 text-xl font-bold tracking-tight">Ops Hub v2</h3>
+          <p style="color:var(--muted-fg);font-size:14px;line-height:1.6;">
+            Operations portal managing 860+ transit advertising campaigns. A 1.3 MB SPA with zero build
+            tools, Victor AI concierge, admin/viewer RBAC, and 4-layer IndexedDB persistence.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="chip">React 18 CDN</span><span class="chip">Cloudflare Workers</span>
+            <span class="chip">IndexedDB</span><span class="chip">Three.js</span>
+          </div>
+          <span class="btn btn-ghost mt-5 card-cta">Case study →</span>
+        </div>
+      </a>
+
+      <a href="/projects/tour-route-planner.html" class="card card-hover card-flex no-underline overflow-hidden">
+        <img class="thumb" src="/screenshots/tour-route-planner.png" alt="Tour Route Planner dashboard with an active trip" loading="lazy">
+        <div class="p-6 card-body">
+          <h3 class="mt-0 mb-2 text-xl font-bold tracking-tight">Tour Route Planner</h3>
+          <p style="color:var(--muted-fg);font-size:14px;line-height:1.6;">
+            AI road-trip planning with route optimization, drag-and-drop itineraries, Firebase Auth, and a
+            natural-language parser that asks for clarification instead of guessing.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="chip">React 18</span><span class="chip">TypeScript</span>
+            <span class="chip">Vite</span><span class="chip">Firebase</span><span class="chip">Leaflet</span>
+          </div>
+          <span class="btn btn-ghost mt-5 card-cta">Case study →</span>
+        </div>
+      </a>
+
+      <a href="/projects/elody.html" class="card card-hover card-flex no-underline overflow-hidden">
+        <img class="thumb" src="/screenshots/elody-tui.png" alt="Elody knowledge agent terminal UI" loading="lazy">
+        <div class="p-6 card-body">
+          <h3 class="mt-0 mb-2 text-xl font-bold tracking-tight">Elody</h3>
+          <p style="color:var(--muted-fg);font-size:14px;line-height:1.6;">
+            A personal knowledge agent exposing 20 MCP tools — hybrid semantic + keyword search over a
+            420-node graph, project-aware code search, and two-way SMS with auto-reply.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="chip">Node.js</span><span class="chip">Gemini 2.5</span>
+            <span class="chip">Ollama</span><span class="chip">MCP SDK</span><span class="chip">Ink TUI</span>
+          </div>
+          <span class="btn btn-ghost mt-5 card-cta">Case study →</span>
+        </div>
+      </a>
+
+      <a href="/projects/abenteuer-giw.html" class="card card-hover card-flex no-underline overflow-hidden">
+        <img class="thumb" src="/screenshots/abenteuer-live-giw.png" alt="GoIconicWay hero with the Klausy AI concierge" loading="lazy">
+        <div class="p-6 card-body">
+          <h3 class="mt-0 mb-2 text-xl font-bold tracking-tight">Abenteuer LIVE + GoIconicWay</h3>
+          <p style="color:var(--muted-fg);font-size:14px;line-height:1.6;">
+            Dual-brand bilingual sites for an EV campervan rental startup, with an LLM concierge wrapped in
+            a regex guardrail that stops the model inventing pickup addresses.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="chip">React 19</span><span class="chip">Vite 6 SSG</span>
+            <span class="chip">Cloudflare Workers</span><span class="chip">GitHub Actions</span>
+          </div>
+          <span class="btn btn-ghost mt-5 card-cta">Case study →</span>
+        </div>
+      </a>
+
+      <a href="/projects/klauz.html" class="card card-hover card-flex no-underline overflow-hidden">
+        <div class="thumb-alt">iOS · React Native</div>
+        <div class="p-6 card-body">
+          <h3 class="mt-0 mb-2 text-xl font-bold tracking-tight">Klauz</h3>
+          <p style="color:var(--muted-fg);font-size:14px;line-height:1.6;">
+            A mobile knowledge engine — 17 screens, orbital compass navigation, and a 3-tier AI stack that
+            degrades from Groq to Gemini to a fully offline local engine.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="chip">React Native</span><span class="chip">Expo</span>
+            <span class="chip">TypeScript</span><span class="chip">Gemini</span><span class="chip">Groq</span>
+          </div>
+          <span class="btn btn-ghost mt-5 card-cta">Case study →</span>
+        </div>
+      </a>
+
+      <a href="/projects/woolly.html" class="card card-hover card-flex no-underline overflow-hidden">
+        <img class="thumb" src="/screenshots/woolly-desktop-pet.png" alt="Woolly desktop pet showing calendar deadlines" loading="lazy">
+        <div class="p-6 card-body">
+          <h3 class="mt-0 mb-2 text-xl font-bold tracking-tight">Woolly</h3>
+          <p style="color:var(--muted-fg);font-size:14px;line-height:1.6;">
+            A native macOS desktop pet that reads a Canvas calendar feed and derives the deadlines that
+            exist in no calendar at all. Swift, Ollama chat, launchd auto-start.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="chip">Swift</span><span class="chip">macOS native</span>
+            <span class="chip">EventKit</span><span class="chip">Ollama</span>
+          </div>
+          <span class="btn btn-ghost mt-5 card-cta">Case study →</span>
+        </div>
+      </a>
+
+      <a href="/projects/chrono.html" class="card card-hover card-flex no-underline overflow-hidden">
+        <img class="thumb" src="/screenshots/chrono-search.png" alt="Chrono CLI semantic search results" loading="lazy">
+        <div class="p-6 card-body">
+          <h3 class="mt-0 mb-2 text-xl font-bold tracking-tight">Chrono</h3>
+          <p style="color:var(--muted-fg);font-size:14px;line-height:1.6;">
+            A developer CLI with Chrono Trigger-inspired time mechanics — semantic search over 57+ indexed
+            coding sessions, bookmarking, and era-based filtering. Open source.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="chip">Python</span><span class="chip">ChromaDB</span>
+            <span class="chip">Ollama</span><span class="chip">CLI</span>
+          </div>
+          <span class="btn btn-ghost mt-5 card-cta">Case study →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Additional -->
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <h2 class="section-title" style="font-size:22px;">Also shipped</h2>
+    <p class="section-sub">Production projects without a full write-up.</p>
+    <div class="table-scroll">
+      <table class="data">
+        <thead><tr><th>Project</th><th>Stack</th><th>What it does</th><th>Link</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Abenteuer Platform</strong></td>
+            <td>Next.js 15, Supabase, Stripe, Three.js</td>
+            <td>Multi-tenant SaaS marketplace — 3-role JWT auth, full booking pipeline, Stripe PaymentIntent + Identity + Connect</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>Narrator</strong></td>
+            <td>Express, @google/genai, React 19, Vite</td>
+            <td>Drop in a screen recording, get back a professional AI voiceover</td>
+            <td><a href="https://github.com/anja687gutierrez-jpg/narrator" style="color:#9dbaff;">GitHub&nbsp;↗</a></td>
+          </tr>
+          <tr>
+            <td><strong>CultureBox</strong></td>
+            <td>Next.js 16, React 19, Tailwind 4, Vitest</td>
+            <td>Social-experiment demo, static export with an end-to-end test suite</td>
+            <td><a href="https://culturebox.pages.dev" style="color:#9dbaff;">Live&nbsp;↗</a></td>
+          </tr>
+          <tr>
+            <td><strong>Bob's StockPulse</strong></td>
+            <td>Next.js 16, AI SDK, yahoo-finance2, Workers</td>
+            <td>Daily automated stock analysis and AI trading signals, emailed via Resend</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>MagnusView</strong></td>
+            <td>React 18, Firebase, Tailwind</td>
+            <td>Drive-based content delivery app on Firebase Hosting</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>Ops Hub Intel</strong></td>
+            <td>Node.js, @babel/parser</td>
+            <td>AST-backed code intelligence — impact analysis and blast-radius detection, runs as a pre-commit agent</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>Thought Graph</strong></td>
+            <td>Vanilla JS, 3d-force-graph, Three.js</td>
+            <td>3D knowledge visualization — 3 topology modes, auto-refreshed from a markdown wiki (runs locally by design)</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Products -->
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <h2 class="section-title" style="font-size:22px;">Developer products</h2>
+    <p class="section-sub">Guides and starter kits I write and sell myself.</p>
+    <div class="table-scroll">
+      <table class="data">
+        <thead><tr><th>Product</th><th>What's in it</th><th>Price</th></tr></thead>
+        <tbody>
+          <tr><td><strong>The CLAUDE.md Playbook</strong></td><td>10-chapter guide, 20 templates, 6 hooks</td><td>$49</td></tr>
+          <tr><td><strong>Zero-Cost Business Dashboard</strong></td><td>Guide, working starter app, 16 E2E tests</td><td>$79</td></tr>
+          <tr><td><strong>Claude Code Power Kit</strong></td><td>7 skills, 5 CLI references, memory architecture</td><td>$29</td></tr>
+          <tr><td><strong>MCP Starter Kit</strong></td><td>4 MCP server templates, 2 production examples</td><td>$29</td></tr>
+          <tr><td><strong>No-Build React Blueprint</strong></td><td>8-chapter guide plus starter template</td><td>$19</td></tr>
+          <tr><td><strong>Claude Code Cheat Sheet</strong></td><td>One-page reference</td><td>Free</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <a class="btn btn-ghost mt-5" href="https://products.goiconicway.com">Visit the storefront ↗</a>
+  </div>
+</section>
+
+<!-- Stack -->
+<section class="section" id="stack" style="padding-top:0;">
+  <div class="wrap">
+    <h2 class="section-title">Technical range</h2>
+    <p class="section-sub">Everything below has shipped to production at least once.</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="card p-5">
+        <h3 class="mt-0 mb-3 text-sm font-semibold" style="color:#9dbaff;">Frontend</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip">React 18/19</span><span class="chip">Next.js 15/16</span><span class="chip">React Native</span>
+          <span class="chip">Expo</span><span class="chip">TypeScript</span><span class="chip">Tailwind 4</span>
+          <span class="chip">Vite 6</span><span class="chip">Three.js</span><span class="chip">shadcn/ui</span>
+        </div>
+      </div>
+      <div class="card p-5">
+        <h3 class="mt-0 mb-3 text-sm font-semibold" style="color:#9dbaff;">Backend &amp; data</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip">Node.js</span><span class="chip">Cloudflare Workers</span><span class="chip">Firebase</span>
+          <span class="chip">Supabase</span><span class="chip">Drizzle ORM</span><span class="chip">IndexedDB</span>
+          <span class="chip">Stripe</span><span class="chip">Google Apps Script</span>
+        </div>
+      </div>
+      <div class="card p-5">
+        <h3 class="mt-0 mb-3 text-sm font-semibold" style="color:#9dbaff;">AI / ML</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip">Groq (Llama 3.3 70B)</span><span class="chip">Gemini 2.5</span><span class="chip">Ollama</span>
+          <span class="chip">MCP</span><span class="chip">RAG pipelines</span><span class="chip">Embeddings</span>
+        </div>
+      </div>
+      <div class="card p-5">
+        <h3 class="mt-0 mb-3 text-sm font-semibold" style="color:#9dbaff;">Infrastructure</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip">Cloudflare Pages</span><span class="chip">Vercel</span><span class="chip">Firebase Hosting</span>
+          <span class="chip">GitHub Actions</span><span class="chip">Wrangler</span><span class="chip">DNS / SSL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section" id="about" style="padding-top:0;">
+  <div class="wrap">
+    <div class="grid lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <h2 class="section-title">About</h2>
+        <div style="color:#c3cad6;font-size:15.5px;line-height:1.75;">
+          <p>I'm an operations coordinator turned full-stack developer. I build the tools my team actually
+          needs, ship them to production, and maintain them myself. I don't work from templates — I architect
+          systems from scratch using original research.</p>
+          <p><strong style="color:var(--fg);">I own the full stack.</strong> Database schema, API design,
+          frontend polish, deployment pipeline, DNS, SSL, monitoring. No handoffs.</p>
+          <p><strong style="color:var(--fg);">I fix the root cause, not the symptom.</strong> I've debugged
+          stale closures in React hooks, IndexedDB write-through races, cross-origin Worker issues, Babel
+          Standalone transpilation edge cases, Stripe webhook signature failures, and Apple nanosecond
+          timestamp decoding — all in production.</p>
+          <p><strong style="color:var(--fg);">Zero-dependency by default.</strong> Ops Hub v2 is a 1.3 MB SPA
+          that runs with no build step, no bundler, no Node.js — just CDN imports and a file server. When I
+          reach for a framework it's because the project needs one.</p>
+          <p><strong style="color:var(--fg);">AI-native workflow.</strong> I build in collaboration with
+          Claude Code. I bring the domain expertise, product vision, and quality bar. Every commit is
+          co-authored, because that's the honest truth of how modern software gets built.</p>
+        </div>
+      </div>
+      <div>
+        <div class="card overflow-hidden">
+          <img src="/screenshots/anja-gutierrez.jpg" alt="Anja Gutierrez" loading="lazy">
+        </div>
+        <div class="metrics mt-4" style="grid-template-columns:repeat(2,minmax(0,1fr));">
+          <div class="metric"><b>25K+</b><span>Lines — Ops Hub alone</span></div>
+          <div class="metric"><b>860+</b><span>Campaigns managed</span></div>
+          <div class="metric"><b>13</b><span>Custom CLI skills</span></div>
+          <div class="metric"><b>3</b><span>Stripe payment flows</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact" style="padding-top:0;">
+  <div class="wrap">
+    <div class="card" style="padding:40px 32px;">
+      <h2 class="section-title" style="margin-bottom:6px;">Get in touch</h2>
+      <p class="section-sub" style="margin-bottom:24px;">
+        Open to contract work and consulting — production applications, internal tools, AI features,
+        architecture reviews, and Cloudflare/Vercel/Firebase infrastructure.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a class="btn btn-primary" href="mailto:anja687gutierrez@gmail.com">anja687gutierrez@gmail.com</a>
+        <a class="btn btn-ghost" href="https://github.com/anja687gutierrez-jpg">GitHub ↗</a>
+        <a class="btn btn-ghost" href="https://products.goiconicway.com">Developer tools ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap flex flex-wrap items-center justify-between gap-3">
+    <span>Anja Gutierrez — Los Angeles, CA</span>
+    <span>Designed and built from scratch. Not a template.</span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -4,6 +4,10 @@ Full-stack developer and AI builder based in Los Angeles. I build production too
 
 **12+ production projects** | **React / Next.js / React Native** | **Firebase / Supabase / Cloudflare** | **AI-native workflow**
 
+🔗 **[anja-portfolio.pages.dev](https://anja-portfolio.pages.dev)** — full case studies with real code samples from each codebase.
+
+> Most of these repositories are private — they run real operations for real businesses. Each case study linked below carries annotated source excerpts from the shipping codebase instead.
+
 ---
 
 ## XPO Fleet Intelligence
@@ -18,7 +22,7 @@ A 23-page fleet management dashboard built from 10 research documents and 16 rea
 
 ![XPO Fleet — Smart Hub Dashboard](screenshots/xpo-fleet-dashboard.png)
 
-[GitHub](https://github.com/anja687gutierrez-jpg/xpo-fleet)
+[Case Study](https://anja-portfolio.pages.dev/projects/xpo-fleet.html) — architecture, methodology, and code samples
 
 ---
 
@@ -41,7 +45,7 @@ Production operations portal managing 860+ OOH transit advertising campaigns acr
 
 </details>
 
-[Live Site](https://ops-hub-mobile.pages.dev) | [Full Case Study](https://github.com/anja687gutierrez-jpg/ops-hub-portfolio)
+[Case Study](https://anja-portfolio.pages.dev/projects/ops-hub-v2.html)
 
 ---
 
@@ -53,7 +57,7 @@ AI-powered road trip planning with interactive maps, route optimization, drag-an
 
 ![Tour Route Planner — Dashboard with Active Trip](screenshots/tour-route-planner.png)
 
-[GitHub](https://github.com/anja687gutierrez-jpg/tour-route-planner)
+[Case Study](https://anja-portfolio.pages.dev/projects/tour-route-planner.html)
 
 ---
 
@@ -65,7 +69,7 @@ Dual-brand bilingual (EN/DE) marketing sites for an EV campervan rental startup.
 
 ![GoIconicWay — English Hero with Klausy AI](screenshots/abenteuer-live-giw.png)
 
-[Live Site](https://abenteuer-mieten.pages.dev)
+[goiconicway.com](https://goiconicway.com) | [abenteuermietenamerika.de](https://abenteuermietenamerika.de) | [Case Study](https://anja-portfolio.pages.dev/projects/abenteuer-giw.html)
 
 ---
 
@@ -79,7 +83,7 @@ A mobile knowledge engine with 17 screens, orbital compass navigation, and a 3-t
 |---------|-------|--------------|
 | 17 | 45 | 7,724 |
 
-[GitHub](https://github.com/anja687gutierrez-jpg/klauz-app)
+[Case Study](https://anja-portfolio.pages.dev/projects/klauz.html)
 
 ---
 
@@ -89,7 +93,6 @@ Automated daily stock analysis platform. Scans portfolio holdings and market mov
 
 **Next.js 16** | **AI SDK** | **yahoo-finance2** | **Cloudflare Workers** | **Stripe** | **Resend**
 
-[GitHub](https://github.com/anja687gutierrez-jpg/bobs-stockpulse)
 
 ---
 
@@ -101,7 +104,7 @@ Personal AI knowledge agent with 20 MCP tools. Natural language search over a 42
 
 ![Elody — Knowledge Agent TUI](screenshots/elody-tui.png)
 
-[GitHub](https://github.com/anja687gutierrez-jpg/elody)
+[Case Study](https://anja-portfolio.pages.dev/projects/elody.html)
 
 ---
 
@@ -113,7 +116,7 @@ A macOS desktop pet — a pixel art sheep that wanders your screen, reads your c
 
 ![Woolly — Desktop Pet with Calendar](screenshots/woolly-desktop-pet.png)
 
-[GitHub](https://github.com/anja687gutierrez-jpg/desktop-pets)
+[Case Study](https://anja-portfolio.pages.dev/projects/woolly.html)
 
 ---
 
@@ -132,7 +135,7 @@ A developer CLI with Chrono Trigger-inspired time mechanics. Semantic search ove
 
 </details>
 
-[GitHub](https://github.com/anja687gutierrez-jpg/chrono-open)
+[GitHub](https://github.com/anja687gutierrez-jpg/chrono-open) | [Case Study](https://anja-portfolio.pages.dev/projects/chrono.html)
 
 ---
 
